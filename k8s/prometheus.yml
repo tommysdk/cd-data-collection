@@ -22,8 +22,8 @@ spec:
         app: prometheus
     spec:
       containers:
-        - name: promethe
-          imagePullPolicy: Never
+        - name: prometheus
+          imagePullPolicy: Always
           image: prom/prometheus:v1.5.0
           ports:
             - containerPort: 9090
