@@ -1,0 +1,32 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: jenkins
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      nodePort: 31080
+  selector:
+    app: jenkins
+---
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: jenkins
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      containers:
+        - name: jenkins
+          imagePullPolicy: Never
+          image: cd-data-collection-jenkins:latest
+          env:
+            - name: "JAVA_OPTS"
+              value: "-Djenkins.install.runSetupWizard=false"
+          ports: 
+            - containerPort: 8080
