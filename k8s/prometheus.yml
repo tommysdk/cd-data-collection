@@ -1,0 +1,29 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: prometheus
+spec:
+  type: NodePort
+  ports:
+    - port: 9090
+      nodePort: 31090
+  selector:
+    app: prometheus
+---
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: prometheus
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: prometheus
+    spec:
+      containers:
+        - name: promethe
+          imagePullPolicy: Never
+          image: prom/prometheus:v1.5.0
+          ports:
+            - containerPort: 9090
