@@ -16,5 +16,5 @@ dockerenv: Makefile
 	minikube docker-env | sed 's/\"//g' > $@
 
 clean:
-	kubectl delete -f --grace-period=0 k8s/ 2>/dev/null; true
+	kubectl delete -f k8s/ 2>/dev/null; true
 	kubectl delete configmap jenkins-jobdsl 2>/dev/null; true
