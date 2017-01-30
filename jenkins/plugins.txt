@@ -1,3 +1,4 @@
 delivery-pipeline-plugin:0.10.2
 prometheus:1.0.6
 job-dsl:1.57
+workflow-aggregator:2.0
