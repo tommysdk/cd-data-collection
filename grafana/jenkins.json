@@ -11,7 +11,7 @@
   "rows": [
     {
       "collapse": false,
-      "height": 222,
+      "height": 633,
       "panels": [
         {
           "cacheTimeout": null,
@@ -206,5 +206,5 @@
   },
   "timezone": "browser",
   "title": "Jenkins",
-  "version": 1
+  "version": 2
 }
