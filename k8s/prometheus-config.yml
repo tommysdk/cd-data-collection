@@ -8,6 +8,7 @@ data:
     scrape_configs:
     - job_name: jenkins
       metrics_path: '/prometheus'
+      scrape_interval: 5s
       static_configs:
       - targets:
         - jenkins:8080
