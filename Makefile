@@ -8,5 +8,8 @@ build:
 deploy:
 	kubectl apply -f k8s/
 
+dashboards:
+	bash grafana/dashboards.sh
+
 dockerenv: Makefile
 	minikube docker-env | sed 's/\"//g' > $@
