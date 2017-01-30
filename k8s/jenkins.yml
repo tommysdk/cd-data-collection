@@ -30,3 +30,10 @@ spec:
               value: "-Djenkins.install.runSetupWizard=false"
           ports: 
             - containerPort: 8080
+          volumeMounts:
+            - name: jenkins-jobdsl-volume
+              mountPath: /jobdsl
+      volumes:
+        - name: jenkins-jobdsl-volume
+          configMap:
+            name: jenkins-jobdsl
