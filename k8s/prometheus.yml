@@ -27,3 +27,10 @@ spec:
           image: prom/prometheus:v1.5.0
           ports:
             - containerPort: 9090
+          volumeMounts:
+            - name: prometheus-config-volume
+              mountPath: /etc/prometheus
+      volumes:
+        - name: prometheus-config-volume
+          configMap:
+            name: prometheus-config
