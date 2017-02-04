@@ -14,6 +14,11 @@ Components
 
 We rely on Jenkins, since it is a widely used base for CI/CD today. We use Prometheus to gather data and metrics and visualize it using Grafana.
 
+Run
+---
+minikube start
+make all
+
 Development
 ---
 * [kubectl](https://kubernetes.io/docs/user-guide/kubectl-overview/)
