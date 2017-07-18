@@ -14,10 +14,18 @@ Components
 
 We rely on Jenkins, since it is a widely used base for CI/CD today. We use Prometheus to gather data and metrics and visualize it using Grafana.
 
+Requirements
+---
+[Minikube](https://github.com/kubernetes/minikube)
+
+Install on Mac OS X using brew:
+
+    brew cask install minikube
+
 Run
 ---
-minikube start
-make all
+    minikube start
+    make all
 
 Development
 ---
