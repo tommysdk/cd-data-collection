@@ -14,23 +14,19 @@ Components
 
 We rely on Jenkins, since it is a widely used base for CI/CD today. We use Prometheus to gather data and metrics and visualize it using Grafana.
 
-Requirements
----
-[Minikube](https://github.com/kubernetes/minikube)
-
-Install on Mac OS X using brew:
-
-    brew cask install minikube
-
 Run
 ---
     minikube start
     make all
 
-Development
+You should now have your local Kubernetes cluster up and running. You should be able to access the Kubernetes dashboard on your VM ip on port 30000:
+
+![Kubernetes Dashboard](https://raw.githubusercontent.com/tommysdk/cd-data-collection/master/k8s-dashboard-example.png)
+
+Development / Requirements
 ---
-* [kubectl](https://kubernetes.io/docs/user-guide/kubectl-overview/)
 * [minikube](https://github.com/kubernetes/minikube)
+* [kubectl](https://kubernetes.io/docs/user-guide/kubectl-overview/)
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * [Docker](https://www.docker.com/)
 
