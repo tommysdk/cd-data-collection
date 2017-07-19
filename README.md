@@ -19,6 +19,12 @@ Run
     minikube start
     make all
 
+Useful commands:
+
+    eval $(minikube docker-env)
+    minikube ip
+    minikube dashboard
+
 You should now have your local Kubernetes cluster up and running. You should be able to access the Kubernetes dashboard on your VM ip on port 30000:
 
 ![Kubernetes Dashboard](https://raw.githubusercontent.com/tommysdk/cd-data-collection/master/k8s-dashboard-example.png)
